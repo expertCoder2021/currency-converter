@@ -307,6 +307,11 @@ class APIController extends Controller
     */
     public function currencyExchangeRate(Request $request){
         $baseId = $request->id;
+
+        $current_date_time = new DateTime("now");
+        $user_current_date = $current_date_time->format("Y-m-d");
+        $currency = Currency::where('date','=',$user_current_date)->get();
+        return $currency ? $currency : 'No record found';
     }
 
 }

@@ -10,6 +10,7 @@
         <div class="col-lg-6">
           <h4>Advanced requirements</h4>
           <router-link to="/baseCurrency"> Base Currency</router-link>
+          <router-link to="/line"> | Line Chart</router-link>
         </div>
       </div>
   </div>
